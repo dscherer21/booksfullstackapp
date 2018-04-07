@@ -5,6 +5,18 @@ p {
 	margin-left: 10px;
 }
 
+form {
+	margin: 10px;
+}
+
+button {
+	margin: 10px;
+}
+
+.App {
+	margin: 15px;
+}
+
 #left, #right {
 	float: left;
 	border: blue 4px dashed;
