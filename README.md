@@ -15,4 +15,3 @@ Express.js
 React.js
 Yarn
 
-Unfortunately, this app will not be live deployed, however, I will upload a video demoing it at a later date.

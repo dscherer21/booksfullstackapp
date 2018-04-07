@@ -40,16 +40,6 @@ db.on("error", function(error) {
     next();
   });
 
-/*
-  ACTIVITY: in your server.js file
-
-  make a route called /book/:id 
-
-  and return the document in the books collection with the id passed in from the url paramaters as json
-
-  10:24
-
-*/
 app.get('/book/:id', function(req, res){
   db.books.find({
     "_id": mongojs.ObjectID(req.params.id)
@@ -58,19 +48,6 @@ app.get('/book/:id', function(req, res){
   });
 });
 
-/*
-  in your server.js
-  ACTIVITY 2:28
-
-  make a put route for /book/:id that updates the book with an id of :id with req.body
-
-  hint: 
-    see app.get('/book/:id'
-
-    and 
-
-    see app.post('/booksinsert'
-*/
 app.put('/book/:id', function(req, res){
     db.books.findAndModify({
       query: {

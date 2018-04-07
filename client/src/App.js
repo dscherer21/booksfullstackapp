@@ -31,11 +31,6 @@ class App extends Component {
     event.preventDefault();
 
     const idDelete = event.target.getAttribute('data-id');
-    // I want you to delete that book and update the state so that the book isn't there that was deleted
-
-    //little hint, take a look at App.js's delete in the songs app
-
-    //2:25
 
     fetch(`http://localhost:3001/delete/${idDelete}`, {
         method: "DELETE",
@@ -61,13 +56,6 @@ class App extends Component {
       .then(res => res.json())
   }
 
-  /*
-    ACTIVITY write a method called loadBook that takes in an id and hits http://localhost:3001/books/:id and console logs the result
-    
-    test this method using the componentDidMount method
-
-    we'll go over this at 11:07 am
-  */
   loadBook = (id) => {
     return fetch(`http://localhost:3001/book/${id}`)
       .then(res => res.json())
@@ -84,7 +72,6 @@ class App extends Component {
       this.loadBook(id)
       .then(res => input.value = res[0].name);
 
-      //activity: 2:05
       //instead of hi, load the title in, use the loadBook function and use the id that you have as an argument
     });
   }
@@ -141,7 +128,6 @@ class App extends Component {
 
     //after it's submitted, update books in state of this component
 
-    //11:50
   }
 
   render() {
@@ -167,46 +153,11 @@ class App extends Component {
 
              <button onClick={() => this.loadEditForm(b._id)}>edit</button>
 
-             {/*
-              ACTIVITY
-
-              11:48
-
-             when the button is clicked, pass in b._id to the updateBook function and alert that value by updating the updateBook function.
-            */}
-
-
-
-             {/*
-              ACTIVITY
-
-             make a button here with the word update in it, trigger a function when the button is clicked that alerts the word update
-              
-              11:32
-           */}
-
-
-
-             {/*1:32*/}
-
-             {/* over here I want you to add a x button.
-
-             when you click on that x button
-
-              I want you to call a function that alerts delete*/}
-
             </p>
           )}
         </div>
 
         <div id="right">
-        {/*
-        
-          ACTIVITY
-          
-          make a form here just like the insert book form
-        
-        */}
 
         {(this.state.update) && <div><form id="updateForm" onSubmit={this.updateBook}>
         <input type="text" />
