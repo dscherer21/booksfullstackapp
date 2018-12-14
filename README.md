@@ -7,13 +7,12 @@ The program is a simple create a book and store it in a database, and retrieve i
 To view a live Demo go here: https://youtu.be/ZC2XujDsflQ
 
 #Technologies Used:
-HTML5
-CSS3
-JavaScript
-ECMAScript
-Node.js
-MondgoDB
-Express.js
-React.js
+HTML5,
+CSS3,
+JavaScript,
+Node.js,
+MondgoDB,
+Express.js,
+React.js,
 Yarn
 
